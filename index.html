@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn chess rules, pieces and practise chess at Chess Academy.">
+  <title>Chess Academy | Learn Chess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#home">♞ Chess Academy</a>
+  <button id="menuToggle" aria-label="Open menu">☰</button>
+  <nav id="nav">
+    <a href="#learn">Learn</a>
+    <a href="#pieces">Pieces</a>
+    <a href="#practice">Practice</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <p class="tag">YOUR FIRST MOVE STARTS HERE</p>
+    <h1>Think ahead.<br><span>Play smarter.</span></h1>
+    <p class="intro">Learn chess from the beginning. Understand the rules, explore the pieces and practise at your own pace.</p>
+    <a class="btn" href="#learn">Start Learning</a>
+    <a class="btn secondary" href="#practice">Try Chess</a>
+  </div>
+  <div class="hero-king">♚</div>
+</section>
+
+<section id="learn" class="section">
+  <p class="tag">THE BASICS</p>
+  <h2>Learn Chess Step by Step</h2>
+  <div class="cards">
+    <article><h3>01. Chessboard</h3><p>A chessboard has 64 squares arranged in 8 rows and 8 columns.</p></article>
+    <article><h3>02. Chess Pieces</h3><p>Learn how pawns, rooks, knights, bishops, queens and kings move.</p></article>
+    <article><h3>03. Checkmate</h3><p>Checkmate means the king is under attack and cannot escape.</p></article>
+    <article><h3>04. Special Moves</h3><p>Learn castling, pawn promotion and en passant.</p></article>
+  </div>
+</section>
+
+<section id="pieces" class="section dark-section">
+  <p class="tag">MEET YOUR TEAM</p>
+  <h2>Know Your Chess Pieces</h2>
+  <div class="piece-grid">
+    <article><div>♙</div><h3>Pawn</h3><p>Moves forward one square and captures diagonally.</p></article>
+    <article><div>♖</div><h3>Rook</h3><p>Moves horizontally or vertically.</p></article>
+    <article><div>♘</div><h3>Knight</h3><p>Moves in an L-shape and can jump over pieces.</p></article>
+    <article><div>♗</div><h3>Bishop</h3><p>Moves diagonally.</p></article>
+    <article><div>♕</div><h3>Queen</h3><p>Moves horizontally, vertically or diagonally.</p></article>
+    <article><div>♔</div><h3>King</h3><p>Moves one square in any direction.</p></article>
+  </div>
+</section>
+
+<section id="practice" class="section">
+  <p class="tag">PRACTISE YOUR MOVES</p>
+  <h2>Interactive Chessboard</h2>
+  <p class="intro">Select a piece and then select a highlighted square.</p>
+  <div class="practice">
+    <div>
+      <div id="board" class="board"></div>
+      <button class="btn" id="resetBoard">Restart</button>
+      <button class="btn secondary" id="undoMove">Undo</button>
+    </div>
+    <div class="info">
+      <h3 id="turn">White to move</h3>
+      <p id="boardMessage">Select one of your pieces.</p>
+      <h3>Move History</h3>
+      <ol id="moves"><li>No moves yet</li></ol>
+    </div>
+  </div>
+</section>
+
+<section id="quiz" class="section dark-section">
+  <p class="tag">TEST YOUR KNOWLEDGE</p>
+  <h2>Chess Beginner Quiz</h2>
+  <div class="quiz">
+    <p id="questionCount">Question 1 of 5</p>
+    <h3 id="question"></h3>
+    <div id="answers"></div>
+    <p id="feedback"></p>
+    <button class="btn" id="nextQuestion" disabled>Next Question</button>
+  </div>
+</section>
+
+<footer>
+  <h2>♞ Chess Academy</h2>
+  <p>Every expert was once a beginner. Keep learning and enjoy chess!</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
